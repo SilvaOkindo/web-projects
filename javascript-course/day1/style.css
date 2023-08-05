@@ -1,0 +1,100 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: 0;
+    border: 0;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+}
+
+html {
+    font-size: 10px
+}
+
+/* 
+        REUSABLES
+ */
+
+ .btn {
+    padding: 1rem 2rem;
+    color: white;
+    background-color: rgb(201, 112, 22);
+    border-radius: .7rem;
+    transition: all 400ms ease;
+    min-width: 15rem;
+ }
+
+ p {
+    font-size: 2rem;
+    margin: 1rem 0;
+    font-weight: 600;
+ }
+
+ img {
+    width: 100%;
+ }
+
+ 
+
+
+
+ /* 
+        REUSABLES
+  */
+
+ .btn.save {
+    background-color: rgb(192, 202, 57);
+    margin-left: 2rem;
+ }
+
+ .btn:hover {
+    background-color: rgb(248, 126, 4);
+    cursor: pointer;
+ }
+
+
+ .purchase-card {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 300px;
+    margin: 4rem auto;
+ }
+
+
+ #error {
+    color: rgb(252, 36, 36);
+    font-size: 1.4rem;
+ }
+
+ .blackjack {
+    background-color: green;
+    height: 300px;
+    width: 400px;
+    margin: 2rem auto;
+    color: white;
+    padding: 1rem;
+    border-radius: 10px;
+ }
+
+ .blackjack h1 {
+    color: goldenrod;
+
+ }
+
+ .blackjack .btn {
+    width: 150px;
+    display: block;
+    margin: 4px auto;
+    background-color: goldenrod;
+    font-weight: bold;
+ }
+
+ #message-el {
+    font-style: italic;
+ }

@@ -1,0 +1,385 @@
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    outline: none;
+    border: none;
+}
+
+:root {
+    --color-primary: #2755E6;
+    --color-primary-2: #0078f6;
+    --color-black: #1c1c1c; 
+    --color-grey: #474555;
+    --color-red: rgb(243, 68, 68);
+    --color-white: #f6f6f6;
+}
+
+* {
+ --color-white: #f6f6f6;
+
+}
+.container {
+    width: 80%;
+    margin: 1rem auto;
+    background-color: white;
+    text-align: center;
+}
+
+/* ===============================NAVGATION BAR===================================================== */
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav .logo {
+    display: flex;
+    align-items: center;
+    gap: 1px;
+}
+
+nav .logo h1{
+    font-size: 1.55rem;
+    margin-bottom: 0px;
+}
+
+
+nav .logo div {
+   height: 6px;
+   width: 6px;
+   background-color: var(--color-primary);
+   border-radius: 50%;
+   margin-bottom: -10px;
+}
+
+
+
+nav .search-bar{
+    border: 1px solid #ececec;
+    background-color: var(--color-white);
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: .65rem;
+}
+
+
+nav .search-bar input {
+    background-color: transparent;
+}
+
+
+nav .actions ul{
+    display: flex;
+    gap: 2rem;
+    color: var(--color-black);
+}
+
+nav .actions ul li a {
+    color: var(--color-black);
+    font-weight: 400;
+}
+
+nav .sign-in {
+   display: flex;
+   align-items: center;
+   gap: 2rem;
+}
+
+nav .sign-in a  {
+    color: var(--color-primary);
+    font-size: 1rem;
+    margin-bottom: 5px;
+}
+
+nav .sign-in i {
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 400ms forwards;
+}
+
+nav .sign-in i:hover {
+    color: var(--color-primary);
+}
+
+/* ===============================HEADER===================================================== */
+
+
+header {
+    height: 80vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("images/bg_img.jpg");    
+    border-radius: 1rem;
+    margin-top: 1.5rem;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+    text-align: center;
+    position: relative;
+}
+
+header h1 {
+    font-size: 3rem;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+}
+
+
+header p {
+    font-size: .9rem;
+}
+
+
+.important-links {
+    background-color: white;
+    width: 90%;
+    margin: auto;
+    position: absolute;
+    bottom: -12%;
+    border-radius: 12px;
+    padding-bottom: 1rem;
+    box-shadow: 0 10px 20px  rgb(238, 235, 235);
+}
+
+.important-links .top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--color-white);
+    padding: 2rem 1rem;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+}
+
+.important-links .top .left ul, .important-links .top .right ul{
+    display: flex;
+    gap: 2rem;
+}
+
+.important-links .top .left a {
+    color: var(--color-black);
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition: all 400ms ease;
+}
+
+.important-links .top .left .active, .important-links .top .right .active{
+    color: var(--color-primary-2);
+}
+
+.important-links .top .left a:hover {
+    color: var(--color-primary-2);
+}
+
+
+.important-links .top .right a {
+    color: var(--color-black);
+    font-size: 0.9rem;
+}
+
+.important-links .top .right .ads {
+    color: var(--color-red);
+}
+
+.important-links .top .right .btn {
+    background-color: var(--color-red);
+    padding: 5px 10px;
+    border-radius: 4px;
+    color: white;
+}
+
+
+.important-links .middle {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+    background-color: var(--color-white);
+    padding: 0 1rem;
+    padding-bottom: 0.1rem;
+    gap: 2rem;
+    box-shadow: 0 10px 20px  rgb(238, 235, 235);
+}
+
+.important-links .middle p {
+    color: var(--color-black);
+}
+
+.important-links .middle button {
+    color: white;
+    background-color: #0078f6;
+    padding: .7rem 2rem;
+    border-radius: 6px;
+    margin-bottom: -8px;
+    border: 1px solid transparent;
+    transition: all 400ms ease;
+}
+
+.important-links .middle button:hover {
+    border-color: var(--color-grey);
+}
+
+
+
+.important-links .middle input {
+    background-color: transparent;
+    flex-grow: 1;
+}
+
+.important-links .bottom {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+.important-links .bottom .chip {
+       font-size: 0.8rem;
+       color: var(--color-black);
+       background-color: var(--color-white);
+       padding: 0.6rem 1.8rem;
+       border-radius: 60px;
+       color: var(--color-grey);
+       transition: all 400ms ease;
+}
+
+.important-links .bottom .chip.active {
+    color: white;
+    background-color: var(--color-primary);
+
+}
+
+.important-links .bottom .chip:hover {
+    color: white;
+    background-color: var(--color-primary);
+}
+
+/* ===============================POPULAR LOCATIONS===================================================== */
+
+
+
+h4 {
+    color: #0078f6;
+    font-size: .9rem;
+    text-align: center;
+    margin-top: 6rem;
+    margin-bottom: 0.5rem;
+
+}
+
+
+
+
+.popular-locations {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.popular-locations .popular-location .img {
+    background-color: red;
+    height: 350px;
+    border-radius: 16px;
+    background-image: url(images/square.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+
+.popular-locations .popular-location h2 {
+    color: var(--color-primary);
+    font-size: 1rem;
+    margin-top: 10px;
+}
+
+.popular-locations .popular-location span {
+    color: var(--color-grey);
+    font-size: 0.7rem;
+}
+
+
+.popular-locations .popular-location p {
+    font-size: 0.85rem;
+}
+
+/* ===============================END OF POPULAR LOCATIONS===================================================== */
+
+
+
+
+/* ===============================FEATURED LOCATIONS===================================================== */
+
+
+.icons-text {
+    display: flex;
+    align-items: center;
+    margin-left: 36.8%;
+    justify-content: space-between;
+}
+
+.icons-text h2 {
+    text-align: center;
+}
+
+.icons {
+    display: flex;
+    gap: 1.8rem;
+}
+
+.icons span {
+    background-color: var(--color-white);
+    padding: 0.3rem 0.5rem;
+    border-radius: 5px;
+}
+
+
+.top-featured-properties {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.top-featured-property {
+    background-color: var(--color-white
+    );
+    padding: .5rem;
+    border-radius: 10px;
+}
+
+.top-featured-property img{
+    width: 10%;
+    border-radius: 10px;
+}
+
+.top-featured-properties .top-featured-property .info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 0.6rem;
+    gap: 0.4rem;
+    
+}
+
+.top-featured-properties .top-featured-property .info h2 {
+    font-size: 1rem;
+}
+
+.top-featured-properties .top-featured-property .info h2:nth-child(2) {
+    color: var(--color-primary);
+}
+
+.top-featured-properties .top-featured-property .info span {
+    color: var(--color-grey);
+    font-size: 0.7rem;
+}
+

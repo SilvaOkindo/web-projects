@@ -1,0 +1,26 @@
+@import url(style.css);
+
+.book-details  {
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    align-items: center;
+    border: 3px solid var(--clr-primary);
+    padding: 1rem;
+    border-radius: 10px;
+}
+
+.image {
+    width: 50%;
+}
+
+.info {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: .2rem;
+}
+
+.publisher {
+    text-transform: capitalize;
+}

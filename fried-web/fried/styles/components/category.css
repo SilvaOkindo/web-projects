@@ -1,0 +1,157 @@
+.category__title {
+    font-weight: 600;
+    font-size: var(--size-3xl);
+}
+
+.category__title span {
+    color: var(--clr-yellow);
+}
+
+.arrow__btns {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+
+.arrow__btn {
+    border: 2px solid transparent;
+    border-radius: 50%;
+    padding: 6px;
+    cursor: pointer;
+    transition: all 300ms ease-in;
+}
+
+.arrow__btn.active {
+    border-color:  var(--clr-yellow);
+}
+
+.arrow__btn:hover {
+    border-color:  var(--clr-yellow);
+}
+
+.arrow__btn .fi {
+    display: flex;
+    justify-content: center;
+}
+
+.categories {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    margin-bottom: 6rem;
+    gap: var(--size-base);
+}
+
+.categories.section {
+    margin-top: 8rem;
+}
+
+.category {
+    background-color: rgb(255, 255, 255);
+    text-align: center;
+    padding: 1rem;
+    border-radius: var(--size-xxs);
+    box-shadow: 0 0 20px 8px  rgb(245, 245, 245);
+    transition: all 400ms ease;
+}
+
+.category:hover {
+    transform: translateY(-5px);
+    box-shadow: none;
+}
+
+.category__image {
+    width: 120px;
+    border-radius: 50%;
+    height: 120px;
+    margin-top: -40%;
+}
+
+
+.category__name {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 1.5rem;
+}
+
+
+
+.category__name .price {
+    color: var(--clr-yellow);
+    font-size: var(--size-xs);
+}
+
+.category__name .name {
+    font-size: var(--size-sm);
+}
+
+.category__arrow-icon {
+    background-color: var(--clr-yellow);
+    padding: 6px;
+    border-radius: 50%;
+    margin-top: 1.5rem;
+    border: 2px solid transparent;
+}
+
+.category__arrow-icon:hover {
+    color: var(--clr-yellow);
+    border-color: var(--clr-yellow);
+    background-color: transparent;
+
+}
+
+.category__arrow-icon .fi {
+    display: flex;
+    justify-content: center;
+    font-size: var(--size-2xl);
+}
+
+
+
+/* 2xl
+@media ( max-width: 1536px) {
+ 
+}
+
+
+/* xl */
+@media ( max-width: 1280px) {
+  .categories {
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 8rem;
+  }
+}
+
+
+
+/* lg*/
+@media ( max-width: 1024px) {
+
+    .categories {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+}
+
+/* md */
+@media ( max-width: 768px) {
+    .categories {
+        grid-template-columns: repeat(2, 1fr);
+      }
+}
+
+
+
+/* sm */
+/* @media ( max-width: 640px) {
+} */
+
+
+/* xs */
+ @media ( max-width: 475px) {
+    .categories {
+        grid-template-columns: repeat(1, 1fr);
+      }
+} 
+

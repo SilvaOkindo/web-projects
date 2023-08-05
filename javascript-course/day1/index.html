@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js day 1 course</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>People entered:</h1>
+        <h1 id="el-counter">0</h1>
+
+        <button class="btn" onclick="increment()">INCREMENT</button>
+        <button class="btn save" onclick="save()">SAVE</button>
+
+        <p id="enteries">Previous Entries:</p>
+
+
+        <div class="purchase-card">
+            <img src="coffee.png">
+            <p>Coffee Cup</p>
+            <button class="btn" id="purchase">Purchase</button>
+            <p id="error"></p>
+        </div>
+
+
+        <div class="blackjack">
+            <h1>BlackJack</h1>
+            <p id="message-el">BlackJack game</p>
+            <p id="card-el">Cards:</p>
+            <p id="sum-el">Sum:</p>
+            <button class="btn" onclick="startGame()">START GAME</button>
+            <button class="btn" onclick="newCard()">NEW CARD</button>
+        </div>
+
+
+    </div>
+
+
+    <script src="index.js"></script>
+    
+</body>
+</html>

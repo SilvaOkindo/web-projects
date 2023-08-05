@@ -1,0 +1,7 @@
+import '../styles/style.css'
+import '../styles/modern-normalize.css'
+import '../styles/components/header.css'
+import '../styles/components/recommended.css'
+import '../styles/components/footer.css'
+import '../styles/components/details.css'
+import '../styles/utils.css'

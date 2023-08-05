@@ -1,0 +1,158 @@
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    border: none;
+}
+
+body {
+    background-color: rgb(140, 174, 204);
+}
+
+.container {
+    width: 80%;
+    margin: 1rem auto;
+    display: grid;
+    place-items: center;
+}
+
+.popup-content {
+    width: 300px;
+    padding: 2rem;
+    background-color: aliceblue;
+    border-radius: 10px;
+    box-shadow: 0 0 20px 8px rgb(188, 212, 236);
+    display: none;
+    position: relative;
+    animation: moveBoxUp 1s ease forwards;
+}
+
+button {
+    margin: 1rem 0;
+    padding: 0.8rem 2rem;
+    color: rgb(37, 48, 43);
+    background-color: rgb(135, 190, 238);
+    border-radius: 10px;
+    box-shadow: 0 0 4px 4px rgb(188, 212, 236);
+    transition: all 400ms ease;
+   
+}
+
+button#btn {
+    position: fixed;
+    bottom: 200px;
+}
+
+#close-btn {
+    padding: 0;
+    background-color: transparent;
+    box-shadow: none;
+    color: rgb(143, 139, 139);
+    font-weight: bold;
+    position: absolute;
+    top: -10px;
+    right: 10px;
+    cursor: pointer;
+    font-size: 1.2rem;
+}
+
+
+button:hover {
+    box-shadow: inset 0 0 4px 4px rgb(188, 212, 236);
+    color: white;
+    cursor: pointer;
+}
+
+.show {
+    display: block;
+    animation: popUp 800ms ease forwards;
+}
+
+.hide {
+    display: none;
+}
+
+
+.move-box-down {
+    animation: moveBoxDown 1s ease forwards;
+}
+
+.move-box-up {
+    animation: scaleDown 800ms ease forwards;
+}
+
+
+
+
+@keyframes moveBoxDown {
+    from {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    50% {
+        opacity: 0.5;
+    }
+    to {
+        transform: translateY(0%);
+    }
+}
+
+@keyframes moveBoxUp {
+    from {
+        transform: translateY(0%);
+    }
+    80% {
+        opacity: 0;
+    }
+    to {
+        transform: translateY(-110%);
+
+    }
+}
+
+@keyframes popUp {
+
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+
+    50% {
+       opacity: 0.3;
+    }
+
+
+    70% {
+        opacity: 0.8;
+     }
+ 
+
+    100% {
+        transform: scale(1);
+    }
+    
+}
+
+@keyframes scaleDown {
+
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+    50% {
+       opacity: 0.3;
+    }
+
+
+    70% {
+        opacity: 0.8;
+     }
+ 
+
+    100% {
+        transform: scale(0);
+        opacity: 0;
+    }
+    
+}

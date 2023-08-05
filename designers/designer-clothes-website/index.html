@@ -1,0 +1,507 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vite App</title>
+
+
+
+  <!-- fonts and icons -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,300&display=swap"
+    rel="stylesheet">
+  <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css'>
+  <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-solid-straight/css/uicons-solid-straight.css'>
+  <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-brands/css/uicons-brands.css'>
+</head>
+
+<body>
+
+  <header>
+    <nav class="container row">
+      <div class="logo">
+        <h1 class="logo__title">BETTA</h1>
+        <div>
+          <ul class="nav__links">
+            <l1><a href="#home">Home</a></l1>
+            <l1><a href="#explore" class="active">Explore</a></l1>
+          </ul>
+        </div>
+      </div>
+
+      <div class="action__btns">
+        <div class="language">
+          <h1>EN</h1>
+          <i class="fi fi-rr-angle-down"></i>
+        </div>
+
+        <div class="icons">
+
+          <span><i class="fi fi-rr-shopping-cart"></i></span>
+          <span> <i class="fi fi-rr-comments"></i></span>
+          <span> <i class="fi fi-rr-bell"></i></span>
+
+
+        </div>
+
+        <img src="./public/user-2.png" alt="profile picture" class="profile-pic nav__profile">
+
+
+      </div>
+    </nav>
+
+    <div class="header__bottom container">
+
+      <div class="left">
+
+        <div class="input__search">
+
+          <span><i class="fi fi-rr-camera header__icon"></i></span>
+          <div class="input__box">
+            <span><i class="fi fi-rr-search"></i></span>
+            <input type="text" placeholder="Search about design or designer ">
+
+          </div>
+        </div>
+
+        <span><i class="fi fi-rr-filter header__icon"></i></span>
+
+      </div>
+
+      <div class="right">
+        <button class="toggle__designer">Designer</button>
+      </div>
+
+    </div>
+  </header>
+
+
+  <main>
+    <section class="container section">
+      <div class="recommend">
+        <small class="sort">sort by</small>
+        <div>
+          <h2>Recommended</h2>
+          <span><i class="fi fi-rr-caret-down"></i></span>
+        </div>
+      </div>
+
+      <hr>
+
+      <div class="recommendations">
+
+        <div class="recommend__item">
+          <div class="image">
+            <img src="/public/dress-2.webp" alt="first dress">
+            <div class="abs__row">
+              <span>190</span>
+              <span><i class="fi fi-rr-heart"></i></span>
+            </div>
+          </div>
+          <div class="row">
+            <small class="dress">Fashion Design</small>
+            <span class="price">$200</span>
+          </div>
+
+          <div class="row">
+            <div class="designer__info">
+              <img src="/public/user-2.png" alt="" class="profile-pic">
+              <small class="designer__name">Bassam Ahmed</small>
+            </div>
+
+            <div class="right">
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="recommend__item">
+          <div class="image">
+            <img src="/public/dress-2.webp" alt="first dress">
+            <div class="abs__row">
+              <span>190</span>
+              <span><i class="fi fi-rr-heart"></i></span>
+            </div>
+          </div>
+          <div class="row">
+            <small class="dress">Fashion Design</small>
+            <span class="price">$200</span>
+          </div>
+
+          <div class="row">
+            <div class="designer__info">
+              <img src="/public/user-2.png" alt="" class="profile-pic">
+              <small class="designer__name">Bassam Ahmed</small>
+            </div>
+
+            <div class="right">
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+            </div>
+          </div>
+
+        </div>
+
+
+        <div class="recommend__item">
+          <div class="image">
+            <img src="/public/dress-2.webp" alt="first dress">
+            <div class="abs__row">
+              <span>190</span>
+              <span><i class="fi fi-rr-search"></i></span>
+            </div>
+          </div>
+          <div class="row">
+            <small class="dress">Fashion Design</small>
+            <span class="price">$200</span>
+          </div>
+
+          <div class="row">
+            <div class="designer__info">
+              <img src="/public/user-2.png" alt="" class="profile-pic">
+              <small class="designer__name">Bassam Ahmed</small>
+            </div>
+
+            <div class="right">
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+            </div>
+          </div>
+
+        </div>
+
+
+        <div class="recommend__item">
+          <div class="image">
+            <img src="/public/dress-2.webp" alt="first dress">
+            <div class="abs__row">
+              <span>190</span>
+              <span><i class="fi fi-rr-heart"></i></span>
+            </div>
+          </div>
+          <div class="row">
+            <small class="dress">Fashion Design</small>
+            <span class="price">$200</span>
+          </div>
+
+          <div class="row">
+            <div class="designer__info">
+              <img src="/public/user-2.png" alt="" class="profile-pic">
+              <small class="designer__name">Bassam Ahmed</small>
+            </div>
+
+            <div class="right">
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="recommend__item">
+          <div class="image">
+            <img src="/public/dress-2.webp" alt="first dress">
+            <div class="abs__row">
+              <span>190</span>
+              <span><i class="fi fi-rr-heart"></i></span>
+            </div>
+          </div>
+          <div class="row">
+            <small class="dress">Fashion Design</small>
+            <span class="price">$200</span>
+          </div>
+
+          <div class="row">
+            <div class="designer__info">
+              <img src="/public/user-2.png" alt="" class="profile-pic">
+              <small class="designer__name">Bassam Ahmed</small>
+            </div>
+
+            <div class="right">
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+            </div>
+          </div>
+
+        </div>
+
+
+        <div class="recommend__item">
+          <div class="image">
+            <img src="/public/dress-2.webp" alt="first dress">
+
+            <div class="abs__row">
+              <span>190</span>
+              <span><i class="fi fi-rr-heart"></i></span>
+            </div>
+          </div>
+          <div class="row">
+            <small class="dress">Fashion Design</small>
+            <span class="price">$200</span>
+          </div>
+
+          <div class="row">
+            <div class="designer__info">
+              <img src="/public/user-2.png" alt="" class="profile-pic">
+              <small class="designer__name">Bassam Ahmed</small>
+            </div>
+
+            <div class="right">
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+            </div>
+          </div>
+
+        </div>
+
+
+        <div class="recommend__item">
+          <div class="image">
+            <img src="/public/dress-2.webp" alt="first dress">
+            <div class="abs__row">
+              <span>190</span>
+              <span><i class="fi fi-rr-heart"></i></span>
+            </div>
+          </div>
+          <div class="row">
+            <small class="dress">Fashion Design</small>
+            <span class="price">$200</span>
+          </div>
+
+          <div class="row">
+            <div class="designer__info">
+              <img src="/public/user-2.png" alt="" class="profile-pic">
+              <small class="designer__name">Bassam Ahmed</small>
+            </div>
+
+            <div class="right">
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="recommend__item">
+          <div class="image">
+            <img src="/public/dress-2.webp" alt="first dress">
+            <div class="abs__row">
+              <span>190</span>
+              <span><i class="fi fi-rr-heart"></i></span>
+            </div>
+          </div>
+          <div class="row">
+            <small class="dress">Fashion Design</small>
+            <span class="price">$200</span>
+          </div>
+
+          <div class="row">
+            <div class="designer__info">
+              <img src="/public/user-2.png" alt="first dress" class="profile-pic">
+              <small class="designer__name">Bassam Ahmed</small>
+            </div>
+
+            <div class="right">
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+            </div>
+          </div>
+
+        </div>
+
+
+        <div class="recommend__item">
+          <div class="image">
+            <img src="/public/dress-2.webp" alt="first dress">
+            <div class="abs__row">
+              <span>190</span>
+              <span><i class="fi fi-rr-search"></i></span>
+            </div>
+          </div>
+          <div class="row">
+            <small class="dress">Fashion Design</small>
+            <span class="price">$200</span>
+          </div>
+
+          <div class="row">
+            <div class="designer__info">
+              <img src="/public/user-2.png" alt="" class="profile-pic">
+              <small class="designer__name">Bassam Ahmed</small>
+            </div>
+
+            <div class="right">
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+            </div>
+          </div>
+
+        </div>
+
+
+        <div class="recommend__item">
+          <div class="image">
+            <img src="/public/dress-2.webp" alt="first dress">
+            <div class="abs__row">
+              <span>190</span>
+              <span><i class="fi fi-rr-heart"></i></span>
+            </div>
+          </div>
+          <div class="row">
+            <small class="dress">Fashion Design</small>
+            <span class="price">$200</span>
+          </div>
+
+          <div class="row">
+            <div class="designer__info">
+              <img src="/public/user-2.png" alt="" class="profile-pic">
+              <small class="designer__name">Bassam Ahmed</small>
+            </div>
+
+            <div class="right">
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="recommend__item">
+          <div class="image">
+            <img src="/public/dress-2.webp" alt="first dress">
+            <div class="abs__row">
+              <span>190</span>
+              <span><i class="fi fi-rr-heart"></i></span>
+            </div>
+          </div>
+          <div class="row">
+            <small class="dress">Fashion Design</small>
+            <span class="price">$200</span>
+          </div>
+
+          <div class="row">
+            <div class="designer__info">
+              <img src="/public/user-2.png" alt="" class="profile-pic">
+              <small class="designer__name">Bassam Ahmed</small>
+            </div>
+
+            <div class="right">
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+            </div>
+          </div>
+
+        </div>
+
+
+        <div class="recommend__item">
+          <div class="image">
+            <img src="/public/dress-2.webp" alt="first dress">
+            <div class="abs__row">
+              <span>190</span>
+              <span><i class="fi fi-rr-search"></i></span>
+            </div>
+          </div>
+          <div class="row">
+            <small class="dress">Fashion Design</small>
+            <span class="price">$200</span>
+          </div>
+
+          <div class="row">
+            <div class="designer__info">
+              <img src="/public/user-2.png" alt="" class="profile-pic">
+              <small class="designer__name">Bassam Ahmed</small>
+            </div>
+
+            <div class="right">
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      </div>
+
+
+    </section>
+  </main>
+
+  <footer class="section">
+
+    <section class="container section__footer">
+      <div class="logo">
+        <h1>BETTA</h1>
+      </div>
+
+      <div class="links">
+
+        <h1 class="footer__title">Company</h1>
+        
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#terms">Terms and Conditions</a></li>
+          <li><a href="#privacy">Privacy</a></li>
+          <li><a href="#faqs">FAQ's</a></li>
+        </ul>
+      </div>
+
+
+      <div class="company__links">
+        <h1 class="footer__title">Follow us</h1>
+
+        <div class="social__links">
+          <span><i class="fi fi-brands-facebook"></i></span>
+          <span><i class="fi fi-brands-instagram"></i></span>
+          <span><i class="fi fi-brands-twitter"></i></span>
+          <span><i class="fi fi-brands-linkedin"></i></span>
+        </div>
+
+      </div>
+     
+
+      <div class="support">
+        <h2 class="footer__title">TECHNICAL SUPPORT</h2>
+        <span><i class="fi fi-brands-whatsapp"></i></span>
+
+      </div>
+    </section>
+   
+  </footer>
+
+
+
+  <script type="module" src="./src/main.js"></script>
+</body>
+
+</html>

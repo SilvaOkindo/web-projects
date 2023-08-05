@@ -1,0 +1,31 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+}
+
+body {
+    background-color: red;
+}
+
+.container {
+   width: 100%;
+   height: 100vh;
+   display: grid;
+   grid-template-columns: 20% auto;
+}
+
+.container aside {
+    background-color: blue;
+}
+
+.container main {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    margin: 1rem;
+}
+

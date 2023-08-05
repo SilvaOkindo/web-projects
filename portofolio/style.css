@@ -1,0 +1,1107 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: 0;
+  border: none;
+  text-decoration: none;
+  list-style: none;
+  font-family: sans-serif;
+  scroll-behavior: smooth;
+}
+
+html {
+  font-size: 10px;
+}
+
+:root {
+  --color-bg: black;
+  --color-primary: #fff;
+  --color-bg-button: rgb(39, 142, 238);
+
+  --border-radius-1: 1rem;
+  --border-radius-2: 3rem;
+  --transition: all 400ms ease;
+}
+
+ body {
+  color: var(--color-primary);
+  background-color: rgb(51, 50, 50);
+} 
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+
+
+/* HEADER */
+header {
+  height: 100vh;
+  background-image: url(images/bg1.jpeg);
+  background-size: 300px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-position-x: 50rem;
+  overflow: hidden;
+  background-color: var(--color-bg);
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+nav .nav__items ul {
+  display: flex;
+  gap: 4rem;
+}
+
+nav .input__search {
+  /* border-bottom: 1px solid var(--color-primary); */
+  display: flex;
+  align-items: center;
+  padding: 2px 1rem;
+  position: relative;
+}
+
+nav .input__search::before {
+  content: "";
+  width: 80%;
+  height: 1px;
+  background-color: #7e7979;
+  position: absolute;
+  bottom: 0;
+}
+
+nav .input__search .fi {
+  font-size: 1.6rem;
+  margin-right: 5px;
+}
+
+nav input {
+  background-color: transparent;
+  color: white;
+  font-size: 1.6rem;
+}
+
+nav input::placeholder {
+  color: white;
+}
+
+nav .fi {
+  display: none;
+  font-size: 1.6rem;
+}
+
+.hero_text {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 15rem;
+  position: relative;
+}
+
+.hero_text .left {
+ flex-basis: 50%;
+}
+
+
+  
+
+.hero_text .left h1 {
+  margin: 1rem 0;
+  font-size: 4.8rem;
+  color: rgb(94, 163, 252);
+}
+
+.hero_text .left h2 {
+  font-size: 1.4rem;
+}
+
+.hero_text .left p {
+  margin-bottom: 5rem;
+}
+
+.hero_text .left .btn {
+  box-shadow: 0px 80px 8rem rgba(90, 89, 89, 0.5);
+  background-color: rgb(44, 43, 43);
+  border: 1px solid rgb(236, 233, 233);
+  padding: 2rem 6rem;
+  margin-right: 4rem;
+  background-image: linear-gradient(
+    to bottom,
+    rgb(83, 82, 82),
+    rgba(70, 68, 68, 0.7)
+  );
+  transition: var(--transition);
+}
+
+.hero_text .left .btn:hover {
+   border: none;
+}
+
+.hero_text .left .player {
+    padding: 1.8rem 2rem; 
+    font-size: 2rem;
+    border-radius: 50%;
+   display: inline-flex;
+   align-items: center;
+   justify-content: center;
+   transition: var(--transition);
+}
+
+
+  .hero_text .right {
+    position: absolute;
+    right: -14.4rem;
+}  
+
+
+
+.hero_text .right  {
+    transform: rotate(270deg);
+    font-size: 1.2rem;
+}
+
+.hero_text .right h2 {
+    font-size: 1.2rem;
+}
+
+.hero_text .right h2 span {
+    font-size: 4rem;
+    height: 2rem;
+}
+/* END HEADER */
+
+
+
+
+
+
+/* REUSABLES */
+
+.btn-primary {
+  padding: 1.2rem 4rem;
+  border-radius: var(--border-radius-2);
+  background-color: var(--color-bg-button);
+  color: var(--color-primary);
+  font-size: 1.4rem;
+  transition: var(--transition);
+}
+
+.btn-primary:hover {
+  border: 1px solid whitesmoke;
+  background-color: transparent;
+}
+
+a {
+  font-size: 1.6rem;
+  color: var(--color-primary);
+}
+
+p {
+  font-size: 1.6rem;
+  line-height: 1.2;
+}
+
+h1 {
+  font-size: 3.2rem;
+}
+
+h2 {
+  font-size: 1.6rem;
+}
+
+h3 {
+  font-size: 1.4rem;
+}
+
+img {
+  width: 100%;
+}
+
+.profile-pic {
+  height: 60px;
+  width: 60px;
+  border: 2px solid rgb(202, 200, 200);
+  border-radius: 50%;
+}
+
+
+button {
+  padding: 1.4rem 2rem;
+  border-radius: 10px;
+  border: 1px solid white;
+  background-color: transparent;
+  color: white;
+  transition: var(--transition);
+}
+
+
+button:hover {
+  background-color: black;
+}
+
+/*END  REUSABLES */
+
+
+
+/* LOGO DESIGN */
+.logo {
+  display: flex;
+  position: relative;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.logo > div {
+  width: 20px;
+  height: 20px;
+  border: 2px solid rgb(133, 131, 245);
+  border-radius: 50%;
+
+  /* position: relative; */
+}
+
+.logo div:nth-child(2) {
+  background-image: linear-gradient(
+    to bottom,
+    rgb(241, 18, 18) 1%,
+    rgba(241, 94, 94, 0) 80%
+  );
+}
+
+.logo div:nth-child(3) {
+  margin-left: -10px;
+}
+
+/* .logo div:nth-child(2) {
+      margin-left: -15px;
+  } */
+.logo div:nth-child(1) {
+  position: absolute;
+  top: 0px;
+  left: -10px;
+}
+
+/* END LOGO DESIGN */
+
+
+
+
+
+/* =======================ACHIEVEMENTS======================== */
+
+.achievement-section {
+   
+    box-shadow: 0  -20px 20px rgb(73, 72, 72);
+}
+
+.achievement-section .achievements {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.achievement-section .achievements > div {
+    background-color: #7e7979;
+    border-radius: 50%;
+    place-content: center;
+    display: grid;
+    place-items: center;
+    height: 150px;
+    width: 150px;
+    margin-top: -7.5rem;
+    box-shadow: 0 20px 20px rgb(73, 72, 72);
+}
+
+
+/* ============================ABOUT================================== */
+
+
+.about {
+  margin-top: 5rem;
+}
+
+.about .row {
+  display: grid;
+  align-items: center;
+  grid-template-columns: 1fr 1fr;
+}
+
+
+.about .row .right {
+  position: relative;
+}
+
+.about .row .left {
+  position: relative;
+
+}
+
+
+.about .row .left .image {
+  position: absolute;
+  width: 150px;
+  top: 14rem;
+  left: 18rem;
+  opacity: 0.4;
+  transform: none; 
+} 
+/* .about .row .left .bg {
+  transform: rotate(90deg);
+} */
+
+.about .row .left img{
+  /* transform: rotate(130deg); */
+  width: 110%;
+  transform: translate(-20px) rotate(90deg);
+  
+}
+
+
+.about .row .right h2 {
+  font-size: 2.8rem;
+  margin-bottom: 2rem;
+}
+
+.about .row .right .rotated-text {
+  position: absolute;
+  transform: rotate(270deg);
+  left: -6rem;
+  top: 6rem;
+}
+
+
+
+
+.about .row .right .rotated-text::before {
+  content: '';
+  height: 3px;
+  width: 100px;
+  background-color: var(--color-primary);
+  position: absolute;
+  right:108%;
+  top: 10px;
+}
+
+
+.about .row .right .rotated-text h3{
+  font-size: 1.8rem;
+}
+
+
+/* ======================SERVICES================== */
+
+
+.section__myservices h1 {
+  margin: 1rem 0;
+}
+
+ .section__myservices .description {
+  max-width: 55%;
+} 
+
+.section__myservices .services {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  text-align: center;
+  gap: 2rem;
+  margin-bottom: 10rem;
+}
+
+.section__myservices .services > div {
+  background-color: rgb(110, 109, 109);
+  padding: 8rem 4rem;
+  margin-top: 10rem;
+  border: 2px solid #cfcccc;
+  border-radius: 2rem;
+  transition: var(--transition);
+  position: relative;
+}
+
+
+.section__myservices .services > div h2 {
+  margin-bottom: 4rem;
+  font-size: 2.4rem;
+}
+
+.section__myservices .services > div:hover {
+  background-color: transparent;
+}
+
+.section__myservices .services .service_icon {
+  padding: 3rem 3.5rem;
+  background-color: white;
+  color: black;
+  display: inline-block;
+  font-size: 3rem;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: -5rem;
+  left: 120px;
+}
+
+.section__myservices .btn{
+  margin-left: 45%;
+}
+
+
+
+/* ==========================RECENT PROJECTS========================== */
+
+.section__recent-projects {
+  margin-bottom: 10rem;
+}
+
+.section__recent-projects h1, .section__recent-projects p {
+  margin-bottom: 2rem;
+}
+
+.section__recent-projects .description {
+  max-width: 55%;
+}
+
+.section__recent-projects .projects {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  row-gap: 3rem;
+  column-gap: 2rem;
+  margin-bottom: 4rem;
+}
+
+.section__recent-projects .projects > div {
+  background-color: rgb(80, 78, 78);
+  border-radius: 10px;
+  border: 2px solid rgb(173, 170, 170);
+  transition: var(--transition);
+}
+
+
+.section__recent-projects .projects > div:hover {
+  transform: translateY(-1rem);
+}
+
+.section__recent-projects .projects > div img {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.section__recent-projects .projects > div .project-info {
+  padding: 1.6rem;
+}
+
+.section__recent-projects .projects > div .project-info h2 {
+  margin: .6rem 0;
+}
+
+.section__recent-projects .projects > div .project-info .row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.section__recent-projects .projects > div .project-info .row .ratings{
+  display: flex;
+  align-items: center;
+  font-size: 1.2rem;
+  gap: 1rem;
+}
+
+.section__recent-projects .projects > div .project-info .row .ratings .fi {
+  color: orange;
+}
+
+.section__recent-projects .btn {
+  margin-left: 45%;
+}
+
+
+/* ===================WHY CHOOSE ME===================== */
+
+.section__why-choose-me {
+  margin-bottom: 10rem;
+}
+
+.section__why-choose-me h2{
+  margin-bottom: 1rem;
+}
+
+.section__why-choose-me p {
+  margin-bottom: 1rem;
+}
+
+.section__why-choose-me .reasons {
+  display: grid;
+  grid-template-columns: 60% 40%;
+  align-items: center;
+  margin-bottom: 2rem;
+  gap: 3rem;
+}
+
+.section__why-choose-me .reasons .left .reason{
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.section__why-choose-me .reasons .left h3 {
+  margin-bottom: .8rem;
+  font-size: 1.45rem;
+}
+
+.section__why-choose-me .reasons .left p {
+  font-size: 1.375rem;
+}
+
+.section__why-choose-me .reasons .left span {
+  background-color: #555353;
+  font-size: 2.4rem;
+  font-weight: 509;
+  padding: 2.5rem 2.3rem;
+  border-top-left-radius: 50%;
+  border-bottom-right-radius: 50%;
+  border: 1px solid rgb(216, 214, 214);
+}
+
+.section__why-choose-me .btn {
+  margin-left: 45%;
+}
+
+
+.section__why-choose-me .right img{
+  width: 230px;
+}
+/* =================TESTIMONIALS============== */
+
+.section__testimonials {
+  margin-bottom: 10rem;
+}
+
+.section__testimonials h2 {
+  margin-bottom: .5rem;
+}
+
+.section__testimonials p {
+  margin-bottom: 3rem;
+}
+
+.section__testimonials .testimonials {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 2rem;
+}
+
+.section__testimonials .testimonials > div {
+  padding: 5rem;
+  padding-bottom: 1rem;
+  position: relative;
+  background-color: #555353;
+  border-radius: 2rem;
+  border: 1px solid;
+}
+
+.section__testimonials .testimonials > div p {
+  font-size: 1.6rem;
+  margin: 1rem 0;
+}
+
+.section__testimonials .testimonials > div .profile-pic {
+  position: absolute;
+  left: 1rem;
+  top: 1rem;
+}
+
+.section__testimonials .testimonials > div .row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
+.section__testimonials .testimonials > div .row span {
+  font-size: 1.6rem;
+}
+
+.section__testimonials .testimonials > div .row span .fi {
+  color: orange;
+  margin-right: 1rem;
+}
+
+
+/* ================================HIRE ME================ */
+
+
+.section__hire {
+  height: 50vh;
+  background-color: rgb(78, 76, 76);
+  margin-bottom: 10rem;
+  border-radius: 2rem;
+  text-align: center;
+  display: grid;
+  place-content: center;
+  place-items: center;
+}
+
+.section__hire p {
+  max-width: 50rem;
+  margin: 2rem 0;
+  margin-bottom: 20r;
+}
+
+.section__contact {
+  margin-bottom: 5rem;
+}
+
+.section__contact .top-info{
+  text-align: center;
+}
+
+
+.section__contact h2 {
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
+}
+
+.section__contact p {
+  max-width: 60rem;
+  margin: auto;
+  margin-bottom: 4rem;
+  font-size: 1.4rem;
+}
+
+.section__contact form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: 
+          "firstname  secondname"
+          "lastname email"
+          "message message";
+  gap: 1rem;
+  width: 60%;
+  margin: auto;
+  padding: 1rem;
+  gap: 2rem;
+  margin-bottom: 4rem;
+}
+
+.firstname-block {
+  grid-area: firstname;
+}
+
+.secondname-block {
+  grid-area: secondname;
+}
+
+.lastname-block {
+  grid-area: lastname;
+}
+.email-block {
+  grid-area: email;
+}
+
+#message {
+  grid-area: message;
+  padding-bottom: 8rem;
+}
+
+label {
+  display: block;
+  font-size: 1.4rem;
+}
+
+form input {
+  background-color: #555353;
+  padding: 1rem;
+  width: 100%;
+  border-radius: 6px;
+  border: 1px solid rgb(122, 120, 120);
+  color: white;
+}
+
+.section__contact .btn {
+  margin-left: 45%;
+}
+
+
+.subscription {
+  text-align: center;
+}
+
+.subscription h2 {
+  margin-bottom: 1rem;
+}
+
+.subscription p {
+  font-size: 1.4rem;
+}
+
+.subscription .sub-form {
+  margin: 1rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.subscription .sub-form input {
+  background-color: #555353;
+  padding: 1rem 3rem;
+  text-align: center;
+  border-radius: 3rem;
+  color: white;
+}
+
+.subscription .sub-form .btn {
+  font-size: 1.3rem;
+}
+
+.subscription .social-icons {
+  display: flex;
+  font-size: 1.2rem;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  color: black;
+margin-bottom: 2rem;
+margin-top: 2rem;
+}
+
+.subscription .social-icons .fi {
+  padding: .8rem 0.8rem;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: .5rem;
+}
+
+hr {
+  background-color: #c4bfbf;
+  height: .1rem;
+  margin-top: 4rem ;
+}
+
+.copyright {
+  text-align: center;
+  margin: 1rem 0;
+}
+
+.copyright p {
+  font-size: 1rem;
+}
+
+
+/* ==============================MEDIA QUERIES============================== */
+
+@media screen and (max-width: 1024px) {
+
+  .container {
+    width: 90%;
+  }
+
+  p {
+    font-size: 1.6rem;
+  }
+  
+  h1 {
+    font-size: 2.8rem;
+  }
+  
+  h2 {
+    font-size: 1.6rem;
+  }
+  
+  h3 {
+    font-size: 1.4rem;
+  }
+
+
+  /* ====================NAVIGATION================= */
+
+
+  header {
+    background-position: center;
+  }
+ 
+  nav {
+    position: relative;
+  }
+  nav .fi{
+    display: inline-block;
+    cursor: pointer;
+  }
+
+  nav #close-menu-btn {
+    display: none;
+  }
+
+
+
+
+  nav .nav__items ul{
+    flex-direction: column;
+    position: absolute;
+    right: 0;
+    padding: 1rem;
+    top: 3rem;
+    display: none;
+    gap: 1rem;
+    transition: var(--transition);
+  }
+
+  
+
+  .hero_text {
+    margin-top: 10rem;
+  }
+
+  .hero_text .left {
+    flex-basis: 80%;
+  }
+
+
+  .hero_text .left h1 {
+    font-size: 2.8rem;
+  }
+
+  .hero_text .left p {
+    font-size: 1.5rem;
+  }
+
+
+
+.about .row .left .image {
+  position: absolute;
+  width: 110px;
+  top: 10rem;
+  left: 12rem;
+  opacity: 0.4;
+}
+
+.about .row .right h2{
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.about .row .right p {
+  font-size: 1.5rem;
+}
+
+.about .row .right .rotated-text {
+  top: 3rem;
+}
+
+.about .row .right .rotated-text h3{
+  font-size: 1.5rem;
+}
+
+
+
+
+.section__myservices h1 {
+  font-size: 2rem;
+}
+
+.section__myservices h2 {
+  font-size: 1.3rem;
+}
+
+.section__myservices .services {
+  grid-template-columns: 1fr 1fr;
+}
+
+.section__recent-projects {
+  margin-top: 10rem;
+}
+
+.section__recent-projects h1 {
+  font-size: 2.0rem;
+  margin: 1rem 0;
+}
+
+.section__recent-projects p {
+  font-size: 1.5rem;
+}
+
+.section__recent-projects .projects {
+  grid-template-columns: 1fr 1fr;
+}
+
+.section__testimonials .testimonials {
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+
+.section__contact form {
+  width: 90%;
+}
+
+
+}
+
+
+/*=================================MEDIA QUERIES (PHONES)====================== */
+
+@media screen and (max-width: 600px) {
+  p {
+    font-size: 1.4rem;
+  }
+  
+  h1 {
+    font-size: 2rem;
+  }
+  
+  h2 {
+    font-size: 1.6rem;
+  }
+  
+  h3 {
+    font-size: 1.4rem;
+  }
+
+
+  header {
+    background-size: 240px;
+    overflow: hidden;
+  }
+
+  
+
+  nav .input__search {
+    width: 30%;
+  } 
+
+  nav .input__search input {
+    font-size: 1.4rem;
+  }
+
+  nav .input__search .fi {
+    font-size: 1.3rem;
+  }
+
+  nav .input__search::before {
+    width: 50%;
+  }
+
+  nav .btn {
+    font-size: 1.3rem;
+    padding: .8rem 2rem;
+  }
+
+  .hero_text {
+    flex-direction: column;
+    margin-top: 15rem;
+  }
+
+  .hero_text .left {
+    margin-left: 1rem;
+  }
+  
+
+  .hero_text .right {
+    top: 8rem;
+    right: -16rem;
+  }
+
+
+  .achievement-section .achievements {
+    gap: 1rem;
+  }
+
+ 
+  
+  .achievement-section .achievements > div {
+    width: 80px;
+    height: 80px;
+    padding: 1rem;
+    margin-top: -5rem;
+  }
+
+  .achievement-section .achievements > div h2 {
+    font-size: 1rem;
+  }
+
+  .about .row{
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .about .row .right {
+    margin-bottom: 10rem;
+    margin-left: 2rem;
+  }
+
+
+  .about .row .right .rotated-text {
+    left: -6rem;
+  }
+
+
+.section__myservices .services {
+  grid-template-columns: 1fr;
+}
+
+.section__myservices .services .service_icon  {
+  left: 12rem;
+  top: -5.5rem;
+}
+
+.section__recent-projects .projects {
+  grid-template-columns: 1fr;
+}
+
+.section__why-choose-me .reasons {
+  grid-template-columns: 1fr;
+}
+
+.section__contact form {
+  width: 100%;
+  grid-template-areas: 
+  "firstname"
+  "secondname"
+  "lastname email"
+  "message";
+  ;
+}
+
+.section__hire {
+  height: 40vh;
+  padding: 1rem;
+}
+
+.section__hire h1 {
+  font-size: 1.6rem;
+}
+
+.subscription .sub-form {
+  flex-direction: column;
+}
+
+
+
+.section__why-choose-me .btn {
+  margin-left: 30%;
+}
+
+.section__myservices .btn{
+  margin-left: 30%;
+}
+
+.section__recent-projects .btn {
+  margin-left: 30%;
+}
+
+.section__contact .btn {
+  margin-left: 30%;
+}
+
+}

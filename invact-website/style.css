@@ -1,0 +1,533 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    outline: none;
+    font-family: poppins, sans-serif;
+}
+
+:root {
+    --color-bg: rgb(252, 248, 248);
+    --box-shadow: 0 0px 10px  rgb(163, 161, 161);
+    --box-shadow-2: 0 0px 5px  rgb(204, 201, 201);
+    --border-radius-1: 12px;
+    --border-radius-2: 5px;
+
+
+}
+
+
+body {
+    background: var(--color-bg);
+}
+
+.btn {
+
+    border: 1px solid rgb(0, 0, 255);
+    padding: 10px 30px;
+    border-radius: 30px;
+    color: blue;
+    font-size: 12px;
+    text-align: center;
+}
+
+
+
+.profile-pic {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: rgb(236, 193, 136);
+}
+
+.container {
+    width: 96%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 11rem auto 15rem;
+    margin-top: 2%;
+    gap: 1rem;
+    margin-bottom: 11rem;
+}
+
+
+
+aside .left {
+    position: relative;
+}
+
+aside .left .logo {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 3rem;
+}
+
+aside .left .logo img {
+    width: 2.5rem;
+}
+
+aside .left h1 {
+    font-weight: 400;
+}
+
+aside .left a {
+    display: flex;
+    height: 3.2rem;
+    gap: 0.5rem;
+    transition: all 300ms;
+}
+
+
+aside .left a h3 {
+    font-weight: normal;
+    font-size: 1rem;
+    color: rgb(54, 50, 50);
+    transition: all 300ms;
+}
+
+aside .left a span {
+    font-weight: normal;
+    color: rgb(161, 159, 159);
+    transition: all 300ms;
+}
+
+
+aside .left a.active {
+    background-color: blue;
+    color: white;
+    width: 180px;
+    height: 50px;
+    margin-bottom: 2rem;
+    border-radius: 40px;
+    display: flex;
+    align-items: center;
+    margin-left: -20px;
+    padding-left: 20px;
+}
+
+aside .left a.active span, aside .left a.active h3 {
+    color: white;
+}
+
+aside .left a:hover span, aside .left a:hover h3  {
+    opacity: 0.5;
+     
+  }
+  
+
+  aside  .premium {
+   margin-top: 8rem;
+  }
+
+  aside .premium h2 {
+    color: orange;
+    font-size: 19px;
+    font-weight: 600;
+  }
+
+  aside .premium p {
+    font-size: 12px;
+    line-height: 1.1rem;
+    margin:1rem 0;
+  }
+
+  aside .premium img {
+    margin-bottom: 1.5rem;
+  }
+
+  aside .premium a.access {
+    background-color: orange;
+    border: none;
+    color: rgb(24, 2, 2);
+    font-weight: 600;
+    padding: 12px 40px;
+    font-size: 18px;
+    
+
+  }
+
+main .search {
+    border: 1px solid grey;
+    padding: 10px 15px;
+    width: 65%;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+   
+}
+
+
+
+main .search input {
+    border: none;
+    background-color: transparent;
+}
+
+main .search span {
+    color: grey;
+    margin-right: 8px;
+   
+}
+
+main h2 {
+    font-weight: 500;
+    margin: 1rem 0;
+    font-size: 1.2rem;
+}
+
+.current-courses {
+   display: grid;
+   grid-template-columns: repeat(4, 1fr);
+   gap: 1rem;
+}
+
+.course {
+    margin-top: 1.5rem;
+    background: rgb(43, 43, 243);
+    padding: 10px;
+    border-radius: var(--border-radius-1);
+    box-shadow: var(--box-shadow);
+}
+
+.course h4 {
+    font-weight: 400;
+    color: white;
+    font-size: 13px;
+}
+
+.current-courses .course p{
+    color: white;
+    font-size: 13px;
+}
+
+
+.course .duration {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 1.2rem;
+}
+
+.course .duration .text-muted {
+    background-color: white;
+    padding: 3px;
+    border-radius: var(--border-radius-2);
+    font-size: 11px;
+    color: grey;
+}
+
+.course .duration span {
+    color: white;
+}
+
+
+.current-courses .current-module {
+    background: rgb(192, 12, 192);
+}
+
+.current-courses .current-module .progress {
+    width: 100%;
+    height: 8px;
+    background: white;
+    border-radius: 10px;
+    margin: 0.5rem 0;
+}
+
+
+.current-courses .current-module .progress .progress-indicator {
+    width: 70%;
+    height: 100%;
+    background: rgb(245, 50, 245);
+    border-radius: 10px;
+}
+
+.current-courses .current-module p {
+    font-size: 13px;
+    color: white;
+}
+
+.row{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.current-courses .finished-module {
+    background-color: rgb(25, 185, 25);
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+
+
+.current-courses .finished-module span, .current-courses .folio-process span {
+    color: white;
+}
+
+.current-courses .folio-process {
+    background: rgb(230, 152, 8);
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+
+
+main table {
+    width: 100%;
+    text-align: start;
+    margin: 1rem 0;
+}
+
+main table thead th{
+    font-weight: 400;
+    font-size: 14px;
+    text-align: start;
+    font-size: 13px;
+}
+
+main table tbody td{
+    height: 3.3rem;
+    font-size: 12px;
+}
+
+main table tbody td p {
+    display: inline;
+    text-align: center;
+}
+
+main table tbody td div {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+main table tbody tr td:nth-child(4) {
+    font-weight: 600;
+}
+
+main table tbody tr td:nth-child(5) div span{
+    font-weight: 600;
+}
+
+main table tbody tr td:nth-child(1) {
+    font-weight: 600;
+}
+
+main .row .scroll {
+    width: 18px;
+    height: 170px;
+    background-color: rgb(206, 202, 202);
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    padding: 2px;
+}
+
+main .row .scroll .indicator {
+    width: 12px;
+    height: 70%;
+    background-color: white;
+    border-radius: 30px;
+}
+
+main .related-courses {
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.8rem;
+}
+
+
+main .related-courses .related-course {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    gap: 0.8rem;
+    border-radius: var(--border-radius-2);
+    box-shadow: var(--box-shadow-2);
+    
+}
+
+main .related-courses .related-course h4 {
+    font-size: 12px;
+    color: aqua;
+    margin-left: 10px;
+}
+
+main .related-courses .related-course h3 {
+    font-size: 12px;
+    font-weight: 400;
+    margin-left: 10px;
+}
+
+
+main .related-courses .related-course p {
+    font-size: 12px;
+    margin-left: 10px;
+}
+
+main .related-courses .related-course a.active{
+    background: blue;
+    color: white;
+}
+
+main .related-courses .related-course a {
+    transition: all 300ms;
+    margin: 10px;
+}
+
+main .related-courses .related-course div {
+    width: 100%;
+    height: 180px;
+    background-color: rgb(252, 236, 207);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top-right-radius: var(--border-radius-2);
+    border-top-left-radius: var(--border-radius-2);
+}
+
+main .related-courses .related-course .course-1 {
+    background-color: rgb(201, 201, 252);
+}
+
+main .related-courses .related-course .course-2 {
+    background-color: pink;
+}
+
+main .related-courses .related-course .course-3 {
+    background-color: rgb(231, 248, 190);
+}
+
+main .related-courses .related-course img {
+   width: 120px; 
+}
+
+
+main .related-courses .related-course a:hover {
+    background: blue;
+    color: white;
+}
+
+
+.right {
+    position: relative;
+    margin-left: 1rem;
+}
+
+.right .top .profile {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    gap: .5rem;
+    right: 0;
+    top: 0;
+}
+
+.right .top .profile span {
+    color: rgb(34, 31, 31);
+}
+
+.right .top .profile span::after {
+    content: '';
+    width: 5;
+}
+
+.right .upcoming-test {
+    margin-top: 7rem;
+   
+}
+
+.right .upcoming-test h2 {
+    font-weight: 500;
+    font-size: 1.5rem;
+}
+
+.right .upcoming-test .test {
+   display: flex;
+   gap: 0.6rem;
+   align-items: center;
+   margin: 1rem 0;
+}
+
+.right .upcoming-test .tests {
+    margin-bottom: 3rem;
+}
+.right .upcoming-test .test img {
+    width: 40px;
+    background: rgb(240, 237, 237);
+    border-radius: var(--border-radius-2);
+}
+
+
+.right .upcoming-test .test h3 {
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.right .upcoming-test .test p {
+    font-size: 13px;
+}
+
+.right .upcoming-test .test p span {
+    color: blue;
+}
+
+
+.right .upcoming-test .test .arrow {
+    font-size: 20px;
+    margin-left: 1rem;
+}
+
+
+
+.right .upcoming-test  .btn{
+    padding: 15px 35px;
+    border: 2px solid blue;
+}
+
+.right .community {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 3.2rem;
+}
+
+.right .community h2 {
+    font-weight: 500;
+    font-size: 1.2rem;
+}
+
+.right .community span {
+    padding: 4px;
+    color: blue;
+   border: 1px solid blue;
+   border-radius: var(--border-radius-2);
+   font-size: 14px;
+}
+
+.right .test {
+    display: flex;
+    gap: 1rem;
+    margin: 1.5rem 0;
+}
+
+.right .test img {
+    width: 40px;
+    background-color: rgb(209, 210, 211);
+    border-radius: var(--border-radius-2);
+}
+
+.right .test h3 {
+    font-weight: 500;
+    font-size: .9rem;
+}
+
+.right .test p {
+    font-size: 13px;
+}

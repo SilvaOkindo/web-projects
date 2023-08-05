@@ -1,0 +1,32 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    background-color: #a7a5a5;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+button {
+    padding: .8rem 3rem;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    background-color: rgb(29, 100, 100);
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 400ms ease-in-out;
+}
+
+button:hover {
+    box-shadow: 0 0 3px 3px rgb(11, 44, 44);
+}

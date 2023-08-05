@@ -1,0 +1,39 @@
+* {
+    padding: 0;
+    margin: 0;
+    border: none;
+    box-sizing: border-box;
+}
+body {
+    background-color: rgb(132, 190, 241);
+}
+.container {
+    display: grid;
+    align-items: center;
+    place-content: center;
+    place-items: center;
+    height: 100vh;
+    gap: 10px;
+}
+
+.box {
+    height: 100px;
+    width: 100px;
+    background: blue;
+    border-radius: 8px;
+}
+
+button {
+    padding: .8rem 3rem;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    background-color: rgb(29, 100, 100);
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 400ms ease-in-out;
+}
+
+button:hover {
+    box-shadow: 0 0 3px 3px rgb(11, 44, 44);
+}

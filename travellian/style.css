@@ -1,0 +1,891 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  list-style: none;
+  font-family: sans-serif;
+}
+
+:root {
+  --transition: all 400ms ease;
+  --color-primay: rgb(251, 127, 82);
+}
+
+
+
+
+img {
+  width: 100%;
+}
+button {
+  background-color: var(--color-primay);
+  padding: 12px 14px;
+  border-radius: 6px;
+  color: white;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.arrows-btn  {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  cursor: pointer;
+}
+
+.arrows-btn .fi {
+  background-color: var(--color-primay);
+  padding: .8rem;
+  border-radius: 4px;
+  color: white;  
+}
+
+
+.arrows-btn .fi:first-child {
+  background-color: black;
+}
+
+.profile-pic {
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+}
+
+
+a {
+  color: white;
+}
+
+h2 {
+  position: relative;
+}
+
+h2::before {
+  content: '';
+  width: 20%;
+  height: 2px;
+  background: var(--color-primay);
+  position: absolute;
+  bottom: -10px;
+}
+
+section h2 {
+  font-size: 2.8rem;
+  margin-bottom: .8rem;
+  font-weight: 300;
+}
+
+.container {
+  width: 84%;
+  margin: auto;
+}
+
+
+/* HEADER */
+
+header {
+  height: 100vh;
+  background-image: linear-gradient(rgb(0, 0, 0), rgb(0, 0, 0, 0.4)), url(images/bg.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: white;
+}
+
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+nav .logo h1{
+  margin-top: 0;
+}
+
+nav .nav-items ul{
+  display: flex;
+  gap: 1.5rem;
+}
+
+nav .nav-items ul li a {
+  position: relative;
+  transition: var(--transition);
+  margin-top: 1rem;
+}
+
+nav .nav-items ul li a.active::before {
+  content: '';
+  height: 2px;
+  width: 100%;
+  background-color: var(--color-primay);
+  position: absolute;
+  bottom: -2px;
+}
+nav .nav-items ul li a:hover::before {
+  content: '';
+  height: 2px;
+  width: 100%;
+  background-color: var(--color-primay);
+  position: absolute;
+  bottom: -2px;
+}
+
+nav  .fi{
+ display: none;
+}
+
+
+
+
+nav .login {
+  display: flex;
+  align-items: center;
+  gap: .6rem;
+}
+
+nav .login button {
+  padding: 12px 20px;
+  margin-top: 1rem;
+}
+
+nav .login button:nth-child(1) {
+  background-color: transparent;
+}
+
+
+nav .login button:hover {
+  background-color: var(--color-primay);
+}
+
+header .row h1 {
+  margin-top: 6rem;
+  font-size: 4rem;
+  font-weight: 400;
+}
+
+header p {
+  margin-top: .8rem;
+}
+
+header .dots {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: .8rem;
+  margin-top: 8rem;
+}
+
+
+header .dots > div{
+  height: 10px;
+  width: 10px;
+  background-color: white;
+  border-radius: 50%;
+}
+
+header .dots > div:nth-child(1) {
+  background-color: var(--color-primay);
+}
+
+header .icons .fi{
+  color: red;
+ 
+
+}
+
+header .booking {
+  display: flex;
+  background-color: white;
+  width: 100%;
+  margin-left: -20%;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+  margin-top: 3rem;
+  border-radius: 10px;
+  height: 120px
+}
+
+header .booking > div {
+  width: 120px;
+}
+
+header .booking > div hr {
+  background-color: rgb(74, 72, 72);
+  width: 100%;
+  height: 1px;
+  margin-top: 5px;
+}
+
+header .booking .destination {
+  margin-left: 20%;
+}
+
+header .booking p {
+  font-size: 10px;
+  color: rgb(72, 70, 70);
+}
+
+header .booking small {
+  font-size: 9px;
+  color: grey;
+}
+
+header .booking .row {
+  align-items: center;
+  justify-content: baseline;
+}
+
+header .booking .fi {
+  color: rgb(72, 70, 70);
+}
+
+header .booking .book {
+  background-color: var(--color-primay);
+  height: 100%;
+  margin-left: 12.3%;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  display: grid;
+  place-items: center;
+  grid-template-columns: 1fr 1fr;
+}
+
+header .booking .book a {
+  font-size: 22px;
+  font-weight: 500;
+}
+
+header .booking .book .fi {
+  color: white;
+}
+
+
+
+/* RESPONSIVENESS  */
+
+
+
+
+
+/* popular destinations */
+
+.section__popular-destinations {
+  margin-top: 8rem;
+}
+
+
+/* .section__popular-destinations h2 {
+  font-size: 2.8rem;
+  margin-bottom: .8rem;
+} */
+
+
+.popular-destinations {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  margin-top: 3rem;
+  gap: 1rem;
+}
+
+.popular-destination {
+  background-image: url(images/popular-1.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 20px;
+  height: 400px;
+  position: relative;
+}
+
+
+.popular-destination:nth-child(2) {
+  background-image: url(images/popular-2.jpg);
+}
+
+.popular-destination:nth-child(4) {
+  background-image: url(images/popular-3.jpg);
+}
+
+
+.popular-destination .popular-info {
+  position: absolute;
+  bottom: 2rem;
+  left: 1rem;
+  color: white;
+}
+
+.popular-destination .popular-info .location {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-top: .5rem;
+}
+
+
+/* special offers */
+
+.section__special-offer {
+  margin-top: 8rem;
+}
+
+.section__special-offer p {
+  font-size: 14px;
+}
+
+.section__special-offer h2 {
+  text-align: right;
+}
+
+.section__special-offer h2::before {
+  width: 14%;
+  right: 0;
+  bottom: -15px;
+}
+
+
+.section__special-offer .special-offers {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+
+.section__special-offer .special-offers .special-offer {
+   margin-top: 3rem;
+}
+
+.section__special-offer .special-offers .special-offer {
+  border-radius: 20px;
+  background-color: rgba(252, 226, 234, 0.3);
+}
+
+
+
+.section__special-offer .special-offers .special-offer .image-box{
+  height: 250px;
+  width: 100%;
+  overflow-y: hidden;
+  object-fit: cover;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+.section__special-offer .special-offers .special-offer .special-info {
+  padding: 1rem;
+}
+
+
+.section__special-offer .special-offers .special-offer .special-info h3 {
+  color: grey;
+  font-weight: 500;
+  font-size: 1rem;
+  margin: .2rem 0;
+}
+
+.section__special-offer .special-offers .special-offer .special-info .fi {
+  color: var(--color-primay);
+  margin-bottom: .8rem;
+}
+
+.section__special-offer .special-offers .special-offer .special-info  p {
+  font-size: 12px;
+}
+
+
+.section__special-offer .special-offers .special-offer .special-info .row .left p{
+  display: inline-block;
+  font-size: .8rem;
+  margin: 0;
+}
+
+.section__special-offer .special-offers .special-offer .special-info .row {
+  margin-top: 1rem;
+}
+
+.section__special-offer .special-offers .special-offer .special-info .row .left {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: .8rem;
+}
+
+.section__special-offer .special-offers .special-offer .special-info .row .left span {
+  color: var(--color-primay);
+  font-size: 1.4rem;
+}
+
+
+.section__blog {
+  margin-top: 8rem;
+}
+
+.section__blog h2::before {
+  width: 10%;
+}
+
+.section__blog .blog {
+  margin-top: 4rem;
+}
+
+.section__blog .blog .row {
+  gap: 2rem;
+}
+
+.section__blog .blog .row .left img {
+  border-radius: 2rem;
+}
+
+.section__blog .blog .row .right h1 {
+  font-weight: 500;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.section__blog .blog .row .right p {
+  line-height: 1.8;
+}
+
+
+
+.section__planning {
+  display: grid;
+  grid-template-columns: 290px 1fr;
+  margin-top: 100px;
+}
+
+.section__planning .right {
+  display: flex;
+
+}
+
+
+.planner {
+  margin-top: 10px;
+  position: relative;
+  width: 200px;
+  height: 60vh;
+  transition: all 400ms ease;
+}
+
+.planner-img {
+  width: 200px;
+  height: 250px;
+  border-radius: 20px;
+  background-image: url(images/square.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.info {
+  font-size: 12px;
+  margin-top: 8px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  display: none;
+  transition: all 400ms ease;
+}
+
+.planner:hover .info {
+  display: block;
+}
+
+.planner:hover {
+  transform: translateY(-40px);
+}
+
+.info .row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 8px 0;
+}
+
+.info h1 {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.info .fi {
+  color: orange;
+}
+
+
+
+.btn__box {
+  margin-top: 30px;
+  position: relative;
+  max-width: 160px;
+  transition: all 400ms ease;
+  margin-left: 10px;
+}
+
+.btn__box button {
+  z-index: 3;
+  position: absolute;
+  transition: all 800ms ease;
+}
+
+.btn__box:hover {
+  transform: translateY(-4px);
+}
+
+.btn__box:hover .box1 {
+  background-color: grey;
+  transform: translateY(35px);
+}
+
+.btn__box:hover .box2 {
+  background-color: black;
+  transform: translateY(-35px);
+}
+
+.btn__box .box {
+  width: 30px;
+  height: 30px;
+  background-color: black;
+  border-radius: 3px;
+}
+
+.btn__box .box1 {
+  position: absolute;
+  top: -12px;
+  z-index: 1;
+  left: -10px;
+  transition: all 800ms ease;
+}
+
+.btn__box .box2 {
+  position: absolute;
+  right: 17px;
+  bottom: -50px;
+  background-color: grey;
+  transition: all 800ms ease;
+}
+
+.left h2 {
+  margin: 10px 0;
+  font-size: 44px;
+  font-weight: 500;
+  position: relative;
+}
+
+.left h2::before {
+  content: "";
+  width: 50%;
+  height: 2px;
+  background-color: orangered;
+  position: absolute;
+  bottom: -10px;
+}
+
+.left p {
+  font-size: 14px;
+  margin-top: 20px;
+}
+
+
+.section__gallery {
+  margin-top: 8rem;
+}
+
+.section__gallery .gallery {
+  margin-top: 4rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+
+.section__gallery .gallery .photo {
+  height: 400px;
+  background-image: url(images/gallery-1.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 1rem;
+  transition: var(--transition);
+}
+
+
+.section__gallery .gallery .photo:hover {
+  transform: translateY(-2rem);
+}
+
+.section__gallery .gallery .photo:nth-child(2) {
+  background-image: url(images/gallery-2.jpg);
+}
+
+.section__gallery .gallery .photo:nth-child(3) {
+  background-image: url(images/gallery-3.jpg);
+}
+
+.section__gallery .gallery .photo:nth-child(4) {
+  background-image: url(images/gallery-5.jpg);
+}
+
+
+.section__testimonials {
+  margin: 8rem 0;
+}
+
+.section__testimonials .row {
+ justify-content: end;
+}
+
+
+.section__testimonials .testimonial {
+  background-color: rgb(224, 220, 220);
+  padding: 2rem;
+  border-radius: 1rem;
+  position: relative;
+  margin-bottom: 2rem;
+}
+
+.section__testimonials .testimonial .profile-pic {
+  position: absolute;
+  top: -2.5rem;
+  left: 2rem;
+}
+
+.section__testimonials .testimonial p{
+  font-size: 12px;
+  margin-bottom: .8rem;
+}
+
+
+.section__testimonials .testimonial .fi {
+  color:  orange;
+}
+
+.section__testimonials .testimonial h5 {
+  font-weight: 400;
+  margin: 0.4rem 0;
+  font-size: small;
+}
+
+.section__testimonials .testimonial span {
+  font-size: 12px;
+}
+
+
+footer {
+  height: 50vh;
+  background-color: rgb(2, 2, 25);
+  position: relative;
+  color: white;
+}
+
+.section__news-letter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 50%;
+  background-color: white;
+  box-shadow: 0 0 1px 1px rgb(217, 217, 217);
+  padding: 2rem;
+  border-radius: 1rem;
+  position: absolute;
+  top: -50px;
+  right: 25%;
+}
+
+.section__news-letter h1 {
+  color: grey;
+}
+
+.section__news-letter .input__email label {
+  display: none;
+  color: grey;
+  font-size: 10px;
+  margin-bottom: 3px;
+}
+
+.section__news-letter .input__email input {
+  padding: .8rem;
+  color: orangered;
+  background-color: rgb(249, 198, 207);
+  border-radius: .5rem;
+}
+
+.section__news-letter .input__email input::placeholder {
+  color: orangered;
+}
+
+footer .footer__info {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  position: absolute;
+  bottom: 1rem;
+  gap: 3rem;
+}
+
+footer .footer__info .logo h1{
+  font-size: 16px;
+}
+
+footer .footer__info  p {
+  font-size: 11px;
+  margin-top: 8px;
+}
+
+footer .footer__info  h3 {
+  margin-bottom: 10px;
+  font-size: 15px;
+}
+
+footer .footer__info a{
+  font-size: 12px;
+}
+
+footer .footer__info  li {
+  margin-top: 8px;
+}
+
+.social-icons {
+  display: flex;
+  gap: .8rem;
+}
+
+
+/* ========================================================MEDIA QUERIES================================================================ */
+
+
+@media (max-width:1200px) {
+  body {
+    background-color: red;
+    overflow-x: hidden;
+  }
+
+  .popular-destinations {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+
+  .section__special-offer .special-offers {
+    grid-template-columns: 1fr 1fr  1fr;
+  }
+
+
+  .section__blog .blog .row .right p {
+    line-height: 1.2;
+  }
+
+ 
+
+}
+
+
+@media screen and (max-width: 1024px){
+
+  section h2 {
+    font-size: 2rem;
+    margin-bottom: .8rem;
+    font-weight: 300;
+  }
+
+  .container {
+    width: 90%;
+  }
+
+
+
+  header {
+    background-position: center;
+  }
+
+
+  header .row h1 {
+    font-size: 2.8rem;
+  }
+
+  nav  {
+    position: relative;
+  }
+
+  nav .nav-items {
+    position: absolute;
+    top: 3rem;
+    left: 0;
+    background-color: rgb(230, 77, 21);
+    padding: 2rem;
+    width: 180px;
+    display: grid;
+    place-items: center;
+    display: none;
+  }
+  
+
+  nav .nav-items ul {
+    flex-direction: column;
+    
+  }
+
+  nav .fi {
+    display: inline-block;
+    cursor: pointer;
+  }
+
+  #close-menu {
+    display: none;
+  }
+
+  nav .logo {
+    opacity: 0;
+  }
+
+  #open-menu {
+    position: absolute;
+    cursor: pointer;
+  }
+
+
+  .popular-destinations {
+    grid-template-columns: 1fr 1fr;
+  }
+
+
+  .section__special-offer .special-offers {
+    grid-template-columns: 1fr 1fr;
+  }
+
+
+  .section__blog .blog .row .right p {
+    line-height: 1.2;
+  }
+
+  .section__planning .right .planner:nth-child(3) {
+    display: none;
+  }
+  
+  /* .section__planning .right .planner:nth-child(4) {
+    display: none;
+  } */
+  
+  .section__gallery .gallery {
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+  }
+
+
+.section__gallery .gallery .photo:hover {
+  transform: translateY(-1rem);
+}
+
+.section__news-letter h1 {
+  font-size: 1rem;
+}
+
+ 
+}

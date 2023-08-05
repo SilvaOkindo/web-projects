@@ -1,0 +1,332 @@
+header {
+    padding-top: 1rem;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+
+.logo__title {
+    font-size: var(--size-sm);
+    font-weight: 400;
+    color: grey;
+}
+
+.nav__links {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+a.active {
+    font-weight: 500;
+}
+
+.action__btns {
+    display: flex;
+    gap: 4rem;
+    align-items: center;
+}
+
+.language {
+    font-size: var(--size-sm);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.language h1 {
+    font-size: var(--size-base);
+    font-weight: 500;
+}
+
+.icons {
+    display: flex;
+    gap: var(--size-base);
+}
+
+.icons .fi {
+    font-size: var(--size-lg);
+    position: relative;
+}
+
+.icons span::before {
+    content: '';
+    height: 8px;
+    width: 8px;
+    position: absolute;
+    background-color: red;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.header__bottom {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+    margin-top: 1.8rem;
+}
+
+
+.left {
+    display: flex;
+    align-items: center;
+    padding: var(--size-xxs);
+    border-radius: 60px;
+    justify-content: space-between;
+    box-shadow: 0 0 1px 1px grey;
+    flex-grow: 1;
+}
+
+
+
+
+.input__search {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.fi {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.profile-pic {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+
+.header__icon {
+    background-color: rgb(238, 235, 241, .7);
+    padding: var(--size-xxs);
+    border-radius: 50%;
+}
+.input__box {
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    gap: var(--size-xs);
+}
+
+
+
+
+.toggle__designer {
+    background-color: rgb(190, 110, 12);
+    padding: var(--size-xs) var(--size-8xl);
+    border-radius: 60px;
+    color: white;
+    font-size: var(--size-sm);
+}
+
+
+/* media queries */
+
+
+/* 2xl */
+@media ( max-width: 1536px) {
+ 
+}
+
+
+/* xl */
+@media ( max-width: 1280px) {
+  
+
+}
+
+
+
+/* lg*/
+@media ( max-width: 1024px) {
+
+
+}
+
+/* md */
+@media ( max-width: 768px) {
+
+    header {
+        padding-top: .5rem;
+    }
+
+
+    .nav__links {
+        gap: 1rem;
+    }
+
+
+    .nav__links a {
+        font-size: var(--size-sm);
+    }
+
+    .action__btns {
+        gap: 2rem;
+    }
+
+
+
+    .header__bottom {
+       justify-content: space-between;
+    }
+
+
+    .left {
+        max-width: 70%;
+        padding: 5px;
+    }
+
+
+    .input__search {
+        max-width: 250px;
+    }
+
+
+    .input__box input {
+        width: 100%;
+    }
+
+    input::placeholder{
+       font-size: var(--size-xs);
+    }
+
+
+    .icons {
+        display: flex;
+        gap: var(--size-xs);
+    }
+
+    .toggle__designer {
+        padding: var(--size-xxs) var(--size-xl);
+        font-size: var(--size-xs);
+    }
+  
+}
+
+
+
+/* sm */
+@media ( max-width: 640px) {
+
+   
+}
+
+
+/* xs */
+@media ( max-width: 475px) {
+    
+
+    
+    .nav__links {
+        gap: var(--size-xs);
+    }
+
+
+    .nav__links a {
+        font-size: var(--size-xs);
+    }
+
+
+    .header__bottom {
+       justify-content: space-between;
+    }
+
+
+.header__icon {
+   font-size: var(--size-sm);
+
+}
+
+    .left {
+        max-width: 60%;
+        padding: 4px;
+    }
+
+
+    .input__search {
+        max-width: 200px;
+    }
+
+    .input__box {
+        gap: var(--size-xxs);
+    }
+    .input__box input {
+        width: 100%;
+    }
+
+
+    .action__btns {
+        gap: 1.5rem;
+    }
+
+    .icons {
+        gap: 1rem;
+    }
+
+
+.language {
+    font-size: var(--size-xs);
+}
+
+
+.language h1 {
+    font-size: var(--size-xs);
+}
+
+    input::placeholder{
+       content: 'Search...';
+       font-size: var(--size-xs);
+    }
+
+
+    .icons {
+        gap: var(--size-xxs);
+       
+    }
+
+    .icons .fi {
+        font-size: var(--size-sm);
+    }
+
+    .icons span::before {
+        content: '';
+        height: 6px;
+        width: 6px;
+        position: absolute;
+        background-color: red;
+        border-radius: 50%;
+        z-index: 1;
+    }
+
+    .header__bottom {
+        margin-top: 1.8rem;
+    }
+
+    
+
+    .toggle__designer {
+        padding: var(--size-xxs) var(--size-xl);
+        font-size: var(--size-xxs);
+    }
+
+    .profile-pic {
+       height: 30px;
+       width: 30px;
+
+    }
+
+
+    .input__box .fi {
+        font-size: var(--size-xs);
+    }
+      
+}

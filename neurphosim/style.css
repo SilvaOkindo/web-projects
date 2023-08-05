@@ -1,0 +1,28 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+}
+
+body {
+   background: rgb(209, 207, 207);
+}
+
+.container {
+    display: grid;
+    place-content: center;
+    margin-top: 2rem;
+}
+
+button {
+    padding: 1rem 4rem;
+    color: rgb(8, 1, 1);
+    font-weight: bold;
+    background-color: #d4d3d3;
+    text-transform: uppercase;
+    border-radius: 2rem;
+    box-shadow: 3px 3px 7px #d1cfcf,
+                -3px -3px 7px #c2c1c1 ;
+}
